@@ -14,7 +14,11 @@ dfticker = df["Symbol"]
 df2ticker = df2["Symbol"]
 lista = dfticker.append(df2ticker)
 
-conn = psycopg2.connect("dbname='postgres' user='postgres' host='dev-datafactory-postgresql.csodrrohkuas.us-east-1.rds.amazonaws.com' password='sbterminal'") #GLobal host
+password = input("Please Enter the Password for the Postgres Database: ")
+
+connectionSTR = "dbname='postgres' user='postgres' host='dev-datafactory-postgresql.csodrrohkuas.us-east-1.rds.amazonaws.com' password=" + password;
+
+conn = psycopg2.connect(connectionSTR)  # GLobal host
 cur = conn.cursor()
 
 count = 0
