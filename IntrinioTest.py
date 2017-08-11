@@ -25,8 +25,8 @@
 
 import intrinio
 #
-intrinio.client.username = '165e99c4bad271d20298f0661636fbcb'
-intrinio.client.password = '1027db3a95605f877d17a2ae87807bbc'
+intrinio.client.username = ''
+intrinio.client.password = ''
 
 print(intrinio.prices('AAPL'))
 #print(intrinio.companies('GOOG'))
